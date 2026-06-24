@@ -378,3 +378,34 @@ Produzir uma especificação detalhada de produto, pronta para servir como base 
 * Apresentação para investidores.
 * Validação com usuários.
 * Planejamento de roadmap.
+
+---
+# ⚠️ Compatibilidade da API
+
+Atualmente, a API utilizada neste projeto foi desenvolvida com base na infraestrutura do ambiente Lovable, o que significa que ela depende de estruturas internas específicas da plataforma para funcionar corretamente.
+
+Por esse motivo, a API funciona apenas dentro do ambiente Lovable no estado atual do projeto.
+
+## 🧠 Por que isso acontece?
+
+A implementação atual utiliza recursos e abstrações próprias do Lovable, como:
+
+Estrutura de rotas e handlers internos da plataforma
+Dependências e configurações automáticas do ambiente
+Integração direta com a arquitetura do projeto dentro do Lovable
+
+Essas dependências não são nativas fora desse ambiente.
+
+## 🔧 Para funcionar em qualquer lugar
+
+Para que a API possa ser executada de forma independente (por exemplo, em um servidor Node.js, Vercel ou outro ambiente), será necessário:
+
+Refatorar as rotas para uma estrutura padrão (ex: Express, Fastify ou Next.js API routes)
+Remover dependências específicas do Lovable
+Adaptar a inicialização do servidor para um runtime independente
+Revisar chamadas internas que dependem da arquitetura da plataforma
+Criar configuração de ambiente (.env) para substituir variáveis internas
+
+## 🚀 Resumo
+
+A versão atual é dependente do ambiente Lovable, mas pode ser adaptada futuramente para execução em qualquer infraestrutura com algumas atualizações estruturais.
